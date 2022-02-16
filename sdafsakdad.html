@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Siguiendo este ejemplo, crea ua aplicación con un texto rojo y que al clicar el botón se ponga verde y así alternativamente-->
+  <title>Investigación</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+function cambiarColor()
+{
+	let lista_p=document.getElementsByTagName("p");
+    let lista_div=document.getElementsByTagName("div");
+    for(i=0;i<lista_p.length;i++){
+        document.getElementsByTagName("p")[i].style.color="red";
+        document.getElementsByTagName("p")[i].innerHTML="ROJO";
+    }
+    for(i=0;i<lista_div.length;i++){
+        document.getElementsByTagName("div")[i].style.color="green";
+        document.getElementsByTagName("div")[i].innerHTML="VERDE";
+    }
+}
+  </script>
+</head>
+<body>
+    <div>Me voy a transformar en verde</div>
+    <div>Yo también</div>
+    <p>Yo me voy a transformar en rojo</p>    
+    <p>Y yo</p>
+    <p>Y yo</p>
+<button onclick="cambiarColor();">Cambiar estado</button>
+</body>
+</html>
